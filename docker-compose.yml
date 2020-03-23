@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+
+  jekyll_blog:
+    container_name: jekyll_blog
+    image: jekyll/builder
+    command: sh -c 'jekyll build'
+    working_dir: /app
+    volumes:
+      - '.:/app'
